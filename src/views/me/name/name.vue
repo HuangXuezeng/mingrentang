@@ -44,6 +44,8 @@ export default {
         nickIsHave(this.nickName).then(res => {
           if (res.code == 1000) {
             this.data.nickName = this.nickName
+            this.data.avatar = this.data.diyAvatar
+            // console.log(this.data)
             updataUserInfo(this.data).then(res => {
               this.$router.push({
                 name: 'me'

@@ -50,8 +50,8 @@ export default {
   },
   methods: {
     addedHandler (i) {
-      console.log(i.response.data[0])
-      this.pic = i.response.data[0]
+      console.log(i.response.data[1])
+      this.pic = i.response.data[1]
       this.data.avatar = this.pic
     },
     save () {

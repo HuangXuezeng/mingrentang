@@ -2,15 +2,22 @@
   <div ref="comment" >
     <div class="comments" v-for="(item, i) in list" :key="i" >
       <div class="l-comment">
-        <img v-if="item.avatar" :src="item.avatar" alt="">
-        <div v-else class='avatar' >
-          <p align="center" >{{item.name}}</p>
-        </div>
+        <template v-if="item.nickIsAble == 0" >
+          <div class='avatar' >
+            <p align="center" >{{item.name}}</p>
+          </div>
+        </template>
+        <template v-else >
+          <img v-if="item.diyAvatar" :src="item.diyAvatar" alt="">
+          <div v-else class='avatar' >
+            <p align="center" >{{item.name}}</p>
+          </div>
+        </template>
       </div>
       <div class="r-comment">
         <p class="name" >
           <span v-if="item.nickIsAble == 0" >{{item.name}}</span>
-          <span v-else >{{item.userName}}</span>
+          <span v-else >{{item.nickName}}</span>
           <span class="zan" align="right" >
             <i class="cubeic-good" :class="{'active' : item.isDianZan > 0}" @click="setGood(i)" >
               <span>{{item.dianzanNum}}</span>
@@ -21,7 +28,7 @@
         <p class="content" v-html="item.comment.replace(/\#[\u4E00-\u9FA5]{1,3}\;/gi, emotion)" ></p>
         <p class="reply" v-if="item.reply" >
           <span style="color: red" >顾家人：</span>
-          <span style="color: #666" >{{item.reply.content}}</span>
+          <span style="color: #666" v-html="item.reply.content.replace(/\#[\u4E00-\u9FA5]{1,3}\;/gi, emotion)" ></span>
         </p>
         <p class="time" >{{item.stime}}</p>
       </div>
