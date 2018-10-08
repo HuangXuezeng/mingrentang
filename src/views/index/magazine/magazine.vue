@@ -100,6 +100,8 @@ export default {
     .item {
       padding 10px 5px
       min-width 90px
+      display flex
+      justify-content center
     }
     .cube-tab_active {
       color #d9261d

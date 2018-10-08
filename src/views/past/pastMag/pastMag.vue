@@ -48,10 +48,10 @@ export default {
   created () {
     getNav(this.$route.query.id).then(res => {
       this.list = res.data
-      console.log(this.list)
+      // console.log(this.list)
       for (let i in res.data) {
         getDocumentList(res.data[i].id).then(res => {
-          console.log(res)
+          // console.log(res)
           this.list[i].magList = res.data.itemList
           let n = + i + 1
           if (n == this.list.length) {
@@ -76,12 +76,15 @@ export default {
     overflow hidden
   }
   .tab-box {
+    height: 6vh
     .cube-tab-bar {
       height: 6vh
     }
     .item {
       padding 10px 5px
-      min-width 80px
+      min-width 90px
+      display flex
+      justify-content center
     }
     .cube-tab_active {
       color #d9261d
