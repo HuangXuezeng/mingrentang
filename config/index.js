@@ -13,7 +13,7 @@ module.exports = {
     proxyTable: {
 			'/kukacms': {
         // target: 'http://116.62.60.13:8080/kukacms',
-         target: 'http://family.kukahome.com:5080/kukacms/',
+        target: 'http://family.kukahome.com:5080/kukacms/',
         // target: 'http://172.16.26.125:9090/kukacms',
         //target: 'http://172.16.26.125:9090'
         changeOrigin: true,

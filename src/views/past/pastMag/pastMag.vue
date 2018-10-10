@@ -50,20 +50,27 @@ export default {
       this.list = res.data
       // console.log(this.list)
       for (let i in res.data) {
-        getDocumentList(res.data[i].id).then(res => {
-          // console.log(res)
+        let typeId = res.data[i].id
+        let n = 1
+        getDocumentList(typeId, n).then(res => {
+          // console.log(res.data.nextPage)
           this.list[i].magList = res.data.itemList
-          let n = + i + 1
-          if (n == this.list.length) {
-            this.active = this.list[0].id
-            // console.log(this.list)
-          }
+          this._getList(res.data.nextPage, typeId, i, n)
+          this.active = this.list[0].id
         })
       }
     })
   },
-  computed: {
-
+  methods: {
+    _getList (isNext, id, i, n) {
+      if (isNext) {
+        n++ 
+        getDocumentList(id, n).then(res => {
+          this.list[i].magList.push(...res.data.itemList)
+          this._getList(res.data.nextPage, id, n)
+        })
+      }
+    },
   },
   components: {
   }

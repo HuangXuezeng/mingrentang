@@ -10,11 +10,11 @@ export function getNav (id) {
 }
 
 // 获取期刊栏目文章列表
-export function getDocumentList (typeId) {
+export function getDocumentList (typeId, page) {
   let url = '/kukacms/visitor/getDocumentAuditPage.htm'
   let data = {
     typeId: typeId,
-    curPage: 1,
+    curPage: page,
     // magazine: magazine
   }
   return fetch({

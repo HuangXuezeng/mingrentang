@@ -78,9 +78,6 @@ export default {
       })
     }
   },
-  computed: {
-
-  },
   components: {
     Swiper
   }
