@@ -25,7 +25,7 @@ const jsApiList = {
     'biz.ding.post',
     'biz.util.uploadImage',
     'biz.navigation.setMenu',
-    'biz.util.share'
+    'biz.util.share',
   ]
 }
 

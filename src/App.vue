@@ -48,6 +48,7 @@ export default {
         // 移动
         console.log('mobile')
         dd.ready(() => {
+          // dd.ui.webViewBounce.disable()
           dd.runtime.permission.requestAuthCode({
             corpId: data.corpId,
             onSuccess: function(result) {
@@ -87,9 +88,13 @@ export default {
   max-width: 400px;
   margin: 0 auto;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .container {
   height: 92vh;
   overflow: hidden;
+}
+*{
+  -webkit-overflow-scrolling: touch;
 }
 </style>
