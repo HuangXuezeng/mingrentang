@@ -26,6 +26,7 @@ const jsApiList = {
     'biz.util.uploadImage',
     'biz.navigation.setMenu',
     'biz.util.share',
+    'ui.webViewBounce.disable'
   ]
 }
 

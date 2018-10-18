@@ -48,7 +48,7 @@ export default {
         // 移动
         console.log('mobile')
         dd.ready(() => {
-          // dd.ui.webViewBounce.disable()
+          dd.ui.webViewBounce.disable()
           dd.runtime.permission.requestAuthCode({
             corpId: data.corpId,
             onSuccess: function(result) {
