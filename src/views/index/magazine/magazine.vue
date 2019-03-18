@@ -51,11 +51,9 @@ export default {
     }
   },
   created () {
-    // console.log(this.Mag)
     if (this.Mag) {
       getNav().then(res => {
         this.list = res
-        // console.log(res)
         for (let i in res) {
           let id = res[i].id
           getDocumentList(id, 1).then(res => {
@@ -64,14 +62,12 @@ export default {
               for (let n = 2; n <= res.data.totalPage; n ++) {
                 getDocumentList(id, n).then(res => {
                   this.list[i].magList.push(...res.data.itemList)
-                  // console.log(this.list[i].magList)
                 })
               }
             }
             let n = + i + 1
             if (n == this.list.length) {
               this.active = this.list[0].id
-              // console.log(this.list)
             }
           })
         }

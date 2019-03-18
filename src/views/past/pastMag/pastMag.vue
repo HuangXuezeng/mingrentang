@@ -48,12 +48,10 @@ export default {
   created () {
     getNav(this.$route.query.id).then(res => {
       this.list = res.data
-      // console.log(this.list)
       for (let i in res.data) {
         let typeId = res.data[i].id
         let n = 1
         getDocumentList(typeId, n).then(res => {
-          // console.log(res.data.nextPage)
           this.list[i].magList = res.data.itemList
           this._getList(res.data.nextPage, typeId, i, n)
           this.active = this.list[0].id

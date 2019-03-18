@@ -27,12 +27,9 @@ export default {
     }
   },
   created () {
-    
     let word = window.location.href.replace(/\=|\#/gi,'')
-    console.log(word)
     if (this.one) {
       getOneList().then(res => {
-        // console.log(res.data)
         this.list = res.data
       })
     }
