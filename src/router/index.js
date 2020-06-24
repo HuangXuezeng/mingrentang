@@ -7,12 +7,27 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/index'
+      redirect: '/celebrityHome'
     },
+    //首页
     {
-      path: '/index',
-      name: 'index',
-      component: () => import('@/views/index/index'),
+      path: '/celebrityHome',
+      name: 'celebrityHome',
+      component: () => import('@/views/celebrityHome/celebrityHome'),
+      meta: { keepAlive: true }
+    },
+    //股份
+    {
+      path: '/celebrityShares',
+      name: 'celebrityShares',
+      component: () => import('@/views/celebrityShares/celebrityShares'),
+      meta: { keepAlive: true }
+    },
+    //某个奖项
+    {
+      path: '/celebrityPrize',
+      name: 'celebrityPrize',
+      component: () => import('@/views/celebrityPrize/celebrityPrize'),
       meta: { keepAlive: true }
     },
     {

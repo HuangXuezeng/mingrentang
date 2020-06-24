@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "cube-ui": "~1.10.9",
+    "vant": "^2.8.7",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

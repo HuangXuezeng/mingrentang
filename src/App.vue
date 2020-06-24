@@ -11,12 +11,18 @@
 </template>
 
 <script>
+import { Search } from 'vant'
 import MTab from '@/components/m-tab'
 import { setDDConfig } from '@/api/dd'
 import { mapMutations } from 'vuex'
 import fetch from '@/api/fetch'
 export default {
   name: 'app',
+  data(){
+    return{
+      value: ''
+    }
+  },
   created () {
     // 获取用户 id
     setDDConfig().then(res => {
@@ -76,7 +82,7 @@ export default {
     })
   },
   components: {
-    MTab,
+    MTab    
   }
 }
 </script>
@@ -85,7 +91,7 @@ export default {
 #app {
   width: 100%;
   height: 100vh;
-  max-width: 400px;
+  max-width: 420px;
   margin: 0 auto;
   box-sizing: border-box;
   overflow: hidden;

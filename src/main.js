@@ -26,6 +26,11 @@ Vue.use(VueLazyLoad,{
     // loading:'./static/loading.gif'
 })
 
+//引入vant
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
+Vue.use(Vant)
 
 Vue.config.productionTip = false
 

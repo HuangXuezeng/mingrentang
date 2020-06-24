@@ -18,17 +18,22 @@
 export default {
   data () {
     return {
-      selectedLabelDefault: 'index',
+      selectedLabelDefault: 'celebrityHome',
       inline: false,
       tabs: [
         {
-          label: 'index',
+          label: 'celebrityHome',
           name: '首页',
           icon: 'cubeic-home'
         }, 
         {
-          label: 'past',
-          name: '期刊',
+          label: 'celebrityShares',
+          name: '股份',
+          icon: 'cubeic-time'
+        }, 
+        {
+          label: 'pasts',
+          name: '单位',
           icon: 'cubeic-time'
         }, 
         {
@@ -56,7 +61,7 @@ export default {
 <style lang="stylus" scoped>
   .m-tab {
     height 8vh;
-    background-color #f4f5f6
+    background-color #fff
     font-size 20px; /*no*/
     box-sizing border-box
     font-weight bold
@@ -66,5 +71,8 @@ export default {
     letter-spacing 5px
     text-indent 5px
     // margin-top 5px
+  }
+  .cube-tab_active{
+    color orange
   }
 </style>
