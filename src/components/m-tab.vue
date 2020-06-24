@@ -32,12 +32,12 @@ export default {
           icon: 'cubeic-time'
         }, 
         {
-          label: 'pasts',
+          label: 'celebrityCompany',
           name: '单位',
           icon: 'cubeic-time'
         }, 
         {
-          label: 'me',
+          label: 'celebrityMy',
           name: '我的',
           icon: 'cubeic-person'
         }

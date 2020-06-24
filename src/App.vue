@@ -99,6 +99,7 @@ export default {
 .container {
   height: 92vh;
   overflow: hidden;
+  /* overflow-y: auto; */
 }
 *{
   -webkit-overflow-scrolling: touch;

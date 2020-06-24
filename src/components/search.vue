@@ -13,7 +13,7 @@ export default {
   },
   methods:{
     search(){
-      console.log(this.value)
+      this.$router.push({name:'celebritySearch'})
     }
   }
 }
